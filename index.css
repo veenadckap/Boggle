@@ -1,0 +1,306 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: #27415a;
+    color: white;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .main {
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 10rem;
+  }
+  
+  /* Layout for left, middle, right */
+  .subcontainer1, .subcontainer2, .subcontainer3 {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .subcontainer1 {
+    width: 18%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 39px;
+}
+
+  .subcontainer1 , .subcontainer3 h2{
+    text-align: center;
+  }
+  
+  .newgame button {
+    width: 121%;
+    height: 39px;
+    border-radius: 20px;
+    border: 3px #0000001a solid;
+    background-color: #27415a;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+}
+  .subcontainer2 {
+    display: flex
+    ;
+        width: 24%;
+        flex-direction: column;
+        height: 457px;
+        gap: 14px;
+}
+
+
+  
+  
+  .subcontainer3 {
+    width: 25%;
+    min-width: 200px;
+  }
+
+  .stopgame button {
+    width: 71%;
+    height: 33px;
+    border-radius: 20px;
+    border: 3px #0000001a solid;
+    background-color: #27415a;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.stopgame{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+button{
+    cursor: pointer;
+}
+.buttons button {
+    width: 38%;
+    height: 38px;
+    border-radius: 20px;
+    border: 3px #0000001a solid;
+    background-color: #27415a;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+
+}
+ 
+.buttons #shuffle {
+    width: 10%;
+    height: 38px;
+    border-radius: 20px;
+    border: 3px #0000001a solid;
+    background-color: #27415a;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+
+}
+
+  /* Responsive layout */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subcontainer1, .subcontainer2, .subcontainer3 {
+      width: 90%;
+    }
+  }
+  
+  /* Switch styles */
+  :root {
+    --switches-bg-color: #27415a;
+    --switches-label-color: rgba(255, 255, 255, 0.534);
+    --switch-bg-color: #1C2F42;
+    --switch-text-color: white;
+  }
+  
+  .switches-container {
+    width: 11rem;
+    position: relative;
+    display: flex;
+    line-height: 2rem;
+    border-radius: 3rem;
+    background: var(--switches-bg-color);
+  }
+  
+  .switches-container input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+  }
+  
+  .switches-container label {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--switches-label-color);
+  }
+  
+  .switch-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    padding: 0.15rem;
+    z-index: 3;
+    transition: transform 0.5s ease;
+  }
+  
+  .switch {
+    border-radius: 3rem;
+    background: var(--switch-bg-color);
+    height: 100%;
+  }
+  
+  .switch div {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: var(--switch-text-color);
+    transition: opacity 0.2s ease 0.125s;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .switches-container input:nth-of-type(1):checked ~ .switch-wrapper {
+    transform: translateX(0%);
+  }
+  
+  .switches-container input:nth-of-type(2):checked ~ .switch-wrapper {
+    transform: translateX(100%);
+  }
+  
+  .switches-container input:nth-of-type(1):checked ~ .switch-wrapper .switch div:nth-of-type(1) {
+    opacity: 1;
+  }
+  
+  .switches-container input:nth-of-type(2):checked ~ .switch-wrapper .switch div:nth-of-type(2) {
+    opacity: 1;
+  }
+  
+  /* Game grid */
+  .gameboard .row1,
+  .gameboard .row2,
+  .gameboard .row3,
+  .gameboard .row4 {
+    display: flex;
+        justify-content: center;
+        margin: 2px;
+        gap: 2px;
+  }
+  
+  .box1 {
+    margin: 0.25rem;
+    background-color: #C6CCD2;
+    width: 58px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+  }
+  
+  .outerbox {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boxcircle {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .scoreboard {
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .score-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #ccc;
+  }
+  
+  .scorelist {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .score-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .score-label {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+   
+  .boxcircle.selected {
+    background-color: #ffe066;
+    border: 2px solid #f08a5d;
+  }
+  
+  .line {
+    position: absolute;
+    height: 2px;
+    background-color: red;
+    transform-origin: left center;
+    z-index: 10;
+  }
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Boogle</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <!-- Left Side -->
+        <div class="subcontainer1">
+          <h2>Current Game</h2>
+          <div class="grid">
+            <div class="switches-container">
+              <input
+                type="radio"
+                id="switchMonthly"
+                name="switchPlan"
+                value="Monthly"
+                checked
+              />
+              <input
+                type="radio"
+                id="switchYearly"
+                name="switchPlan"
+                value="Yearly"
+              />
+              <label for="switchMonthly">unlimited</label>
+              <label for="switchYearly">timer</label>
+              <div class="switch-wrapper">
+                <div class="switch">
+                  <div>unlimited</div>
+                  <div>timer</div>
+                </div>
+              </div>
+            </div>
+            <div class="newgame">
+              <button>New Game</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center -->
+        <div class="subcontainer2">
+          <div class="stopgame">
+            <button>end game & submit score</button>
+          </div>
+          
+          <div class="gameboard">
+            <div class="row1">
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">A</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">B</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">C</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">D</div></div>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">E</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">f</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">g</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">h</div></div>
+              </div>
+            </div>
+            <div class="row3">
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">i</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">j</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">k</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">l</div></div>
+              </div>
+            </div>
+            <div class="row4">
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">m</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">n</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">o</div></div>
+              </div>
+              <div class="box1">
+                <div class="outerbox"><div class="boxcircle">r</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="selected-word">
+            <strong>Selected Word: </strong><span id="currentWord"></span>
+          </div>
+          <div id="error" style="color: red; margin-top: 10px;"></div>
+
+          <div class="buttons">
+            <button id="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+            <button>submit</button>
+            <button id="clear">🧹 Clear</button>
+           
+
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="subcontainer3">
+          <h2>Your Scores</h2>
+          <div class="scoreboard">
+    
+            <div class="scorelist">
+              <div class="score-item">
+                <div class="score-value">0</div>
+                <div class="score-label">High Score</div>
+              </div>
+              <div class="score-item">
+                <div class="score-value">0</div>
+                <div class="score-label">Words Found</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
